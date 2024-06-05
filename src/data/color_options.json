@@ -1,0 +1,32 @@
+[
+  {
+    "value": "red",
+    "label": "red-dot",
+    "icon": "🔴"
+  },
+  {
+    "value": "orange",
+    "label": "orange-dot",
+    "icon": "🟠"
+  },
+  {
+    "value": "yellow",
+    "label": "yellow-dot",
+    "icon": "🟡"
+  },
+  {
+    "label": "green",
+    "value": "green-dot",
+    "icon": "🟢"
+  },
+  {
+    "value": "blue",
+    "label": "blue-dot",
+    "icon": "🔵"
+  },
+  {
+    "value": "purple",
+    "label": "purple-dot",
+    "icon": "🟣"
+  }
+]

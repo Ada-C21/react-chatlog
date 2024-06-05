@@ -1,11 +1,27 @@
+import colorOptions from '../data/color_options.json';
 import PropTypes from 'prop-types';
 
 const ColorChoice = (props) => {
+
+  const colorButtons = colorOptions.map((color, i) => {
+    return (
+      <button
+        key={i}
+        className={color.value} 
+        role="img" 
+        aria-label={color.label}
+        onClick={() => props.setColorCallback(color.value)}>
+          🔴
+      </button>
+    );
+  });
+
   return (
     <section className="color widget">
       <h3 className={props.color}>{props.name}&apos;s color: </h3>
       <nav>
-        <button 
+        {colorButtons}
+        {/* <button 
           className="red" 
           role="img" 
           aria-label="red dot"
@@ -50,7 +66,7 @@ const ColorChoice = (props) => {
           onClick={() => props.setColorCallback('purple')}
         >
             🟣
-        </button>
+        </button> */}
       </nav>
     </section>
   );

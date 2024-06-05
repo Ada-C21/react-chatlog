@@ -2,14 +2,6 @@ import PropTypes from 'prop-types';
 import ColorChoice from './ColorChoice';
 
 const ChatPageHeader = (props) => {
-  const setSenderColor0 = (newColor) => {
-    props.setColor0(newColor);
-  };
-    
-  const setSenderColor1 = (newColor) => {
-    props.setColor1(newColor);
-  };
-
   const coloredName1 = (
     <span id="sender1" className={props.color0}>
       {props.sender0}
@@ -29,7 +21,7 @@ const ChatPageHeader = (props) => {
       </h1>
       <section>
         <ColorChoice
-          setColorCallback={setSenderColor0}
+          setColorCallback={props.setColor0}
           name={props.sender0}
           color={props.color0}
         />
@@ -40,7 +32,7 @@ const ChatPageHeader = (props) => {
             {props.totalLikes} ❤️s
         </h2>
         <ColorChoice
-          setColorCallback={setSenderColor1}
+          setColorCallback={props.setColor1}
           name={props.sender1}
           color={props.color1}
         />

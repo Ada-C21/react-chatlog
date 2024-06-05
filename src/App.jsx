@@ -12,20 +12,23 @@ const App = () => {
   const calculateHearts = () => {
     const totalLikes = entries.reduce((accumulator, entry) => {
         return accumulator + (entry.liked ? 1 : 0);
-      }, 0,
+      }, 0
     );
 
     return totalLikes;
   };
 
   const updateLiked = (id) => {
-    const entriesCopy = [...entries];
-    for (let entry of entriesCopy) {
-      if (entry.id === id) {
-        entry.liked = !entry.liked;
-      }
-    }
-    setEntries(entriesCopy);
+    const newMsgData = chatMessages.map((message) => {
+      const messageCopy = {...message};
+      if (id === message.id) {
+        messageCopy.liked = !message.liked;
+      } 
+
+      return messageCopy;
+    });
+
+    setEntries(newMsgData);
   };
 
   return (
