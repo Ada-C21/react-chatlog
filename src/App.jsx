@@ -18,18 +18,29 @@ const App = () => {
     return totalLikes;
   };
 
+  // -= New version of updateLiked using map() =-
   const updateLiked = (id) => {
     const newMsgData = chatMessages.map((message) => {
       const messageCopy = {...message};
       if (id === message.id) {
         messageCopy.liked = !message.liked;
       } 
-
       return messageCopy;
     });
 
     setEntries(newMsgData);
   };
+
+  // -= Old version of updateLiked =-
+  // const updateLiked = (id) => {
+  //   const newMsgData = [...chatMessages];
+  //   for (let message of newMsgData) {
+  //     if (message.id === id) {
+  //       message.liked = !message.liked;
+  //     }
+  //   }
+  //   setEntries(newMsgData);
+  // };
 
   return (
     <div id="App">

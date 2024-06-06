@@ -11,7 +11,7 @@ const ColorChoice = (props) => {
         role="img" 
         aria-label={color.label}
         onClick={() => props.setColorCallback(color.value)}>
-          🔴
+          {color.icon}
       </button>
     );
   });
