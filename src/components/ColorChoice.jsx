@@ -24,14 +24,14 @@ const ColorChoice = (props) => {
         {/* <button 
           className="red" 
           role="img" 
-          aria-label="red dot"
+          aria-label="red-dot"
           onClick={() => props.setColorCallback('red')}>
             🔴
         </button>
         <button
           className="orange" 
           role="img" 
-          aria-label="orange dot"
+          aria-label="orange-dot"
           onClick={() => props.setColorCallback('orange')}
         >
             🟠
@@ -39,7 +39,7 @@ const ColorChoice = (props) => {
         <button
           className="yellow"
           role="img" 
-          aria-label="yellow dot"
+          aria-label="yellow-dot"
           onClick={() => props.setColorCallback('yellow')}
         >
             🟡
@@ -47,7 +47,7 @@ const ColorChoice = (props) => {
         <button
           className="green"
           role="img" 
-          aria-label="green dot"
+          aria-label="green-dot"
           onClick={() => props.setColorCallback('green')}
         >
             🟢
@@ -55,14 +55,14 @@ const ColorChoice = (props) => {
         <button 
           className="blue" 
           role="img" 
-          aria-label="blue dot"
+          aria-label="blue-dot"
           onClick={() => props.setColorCallback('blue')}>
             🔵
         </button>
         <button
           className="purple"
           role="img" 
-          aria-label="purple dot"
+          aria-label="purple-dot"
           onClick={() => props.setColorCallback('purple')}
         >
             🟣
